@@ -1,0 +1,502 @@
+@font-face {
+    font-family: 'fontAwesome';
+    src: url('assets/fonts/fontAwesome/fontawesome-webfont.eot');
+    /* IE9 Compat Modes */
+    src: url('assets/fonts/fontAwesome/fontawesome-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+    url('assets/fonts/fontAwesome/fontawesome-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+    url('assets/fonts/fontAwesome/fontawesome-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('assets/fonts/fontAwesome/fontawesome-webfont.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(MaterialIcons-Regular.woff2) format('woff2'),
+       url(MaterialIcons-Regular.woff) format('woff'),
+       url(MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  /*font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  /*line-height: 1;*/
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+    background: rgb(238, 238, 238);
+}
+
+body {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    -moz-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    -webkit-perspective: 1400px;
+    -moz-perspective: 1400px;
+    perspective: 1400px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    background-color: transparent;
+}
+
+.gwd-div-bkij {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: none;
+    background-color: rgb(117, 164, 173);
+}
+
+.gwd-div-1stp {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 360px;
+    height: 640px;
+    margin-left: -180px;
+    margin-top: -320px;
+    box-shadow: rgba(0, 0, 0, 0.188235) 0px 10px 20px, rgba(0, 0, 0, 0.227451) 0px 6px 6px;
+    border-radius: 6px;
+    overflow: hidden;
+    line-height: 300%;
+    background-image: none;
+    background-color: rgb(248, 248, 248);
+}
+
+.gwd-div-1vyq {
+    position:fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 2;
+    color: white;
+    border-top: 5px solid #0097A7;
+    height: 75px;
+    min-height: 40px;
+    vertical-align: middle; 
+    /* background: url('assets/handmadepaper-tiel.png');
+            background-repeat: repeat; */
+    background-color: #00BCD4;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+    z-index: 0;
+}
+
+.gwd-div-1n6y {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 74px;
+    height: 86%;
+    padding-top: 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: white;
+    z-index: -1;
+    /* background: url(assets/handmadepaper.png) repeat; */
+    background: #F5F5F5;
+}
+
+.gwd-div-cb5l {
+    position: absolute;
+    border-radius: 50%;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 40px;
+    line-height: 130%;
+    width: 55px;
+    height: 55px;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 3px, rgba(0, 0, 0, 0.239216) 0px 1px 2px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    /* background-image: url('assets/handmadepaper-orange.png');
+            background-repeat: repeat; */
+    background-color: #FF5722;
+    border: 1px solid #FFA000;
+    color: azure;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.gwd-div-cb5l1 {
+    position: absolute;
+    border-radius: 50%;
+    left: 20px;
+    top: 20px;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 40px;
+    line-height: 130%;
+    width: 55px;
+    height: 55px;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 3px, rgba(0, 0, 0, 0.239216) 0px 1px 2px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    /* background-image: url('assets/handmadepaper-orange.png');
+            background-repeat: repeat; */
+    background-color: #FFC107;
+    border: 1px solid #FFA000;
+    color: azure;
+}
+
+.gwd-div-cb5l:hover {
+    box-shadow: rgba(0, 0, 0, 0.188235) 0px 10px 20px, rgba(0, 0, 0, 0.227451) 0px 6px 6px;
+}
+
+.gwd-div-cb5l1:hover {
+    box-shadow: rgba(0, 0, 0, 0.188235) 0px 10px 20px, rgba(0, 0, 0, 0.227451) 0px 6px 6px;
+}
+
+.gwd-div-1g9m:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 14px;
+    left: 5px;
+    width: 50%;
+    top: 60%;
+    max-width: 80px;
+    background: #777;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-5deg);
+}
+
+.gwd-div-1g9m-e7:before, .gwd-div-1g9m-e7:after {
+    content:"";
+    position:absolute; 
+    z-index:-1;
+    box-shadow:0 0 20px rgba(32, 44, 36, 0.3);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    border-radius:100px / 10px;
+}
+.gwd-div-1g9m-e7:after {
+     right:10px; 
+    left:auto; 
+    transform:skew(8deg) rotate(3deg);
+}
+
+.gwd-div-1g9m {
+    position: relative;
+    float: left;
+    margin-left: 5%;    
+    margin-bottom: 20px;
+    width: 90%;
+    min-height: 40px;
+    background: white;
+    border: 1px solid #E4E4E4;
+    color: darkblue;
+}
+
+.gwd-div-1g9m-e7 {
+    position: relative;
+    float: left;
+    margin-left: 5%;    
+    margin-bottom: 20px;
+    width: 90%;
+    min-height: 40px;
+    background: white;
+    border: 1px solid #E4E4E4;
+    color: darkblue;
+}
+
+.gwd-div-pjjz {
+    position: absolute;
+    color: green;
+    height: 100%;
+    top: 50%;
+    margin-top: -20px;
+    left: 1%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.gwd-div-pjjz-r {
+    position: absolute;
+    font-size: 18px;
+    text-align: right;
+    padding-right: 5px;
+    line-height: 2;
+    color: #67afa9;
+    height: 100%;
+    top: 50%;
+    margin-top: -20px;
+    right: 1%;
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.done-btn {
+    color: red;
+}
+
+.gwd-div-text {
+    left: 0px;
+    top: 0;
+    width: auto;
+    min-height: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 16px;
+    /* background-image: url("assets/handmadepaper.png"); */
+    background-color: white;
+    background-repeat: repeat;
+}
+
+.gwd-div-tip {
+    position: relative;
+    float: left;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    min-height: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;    
+    text-align: center;
+    font-family: Verdana;
+    font-size: 16px;
+    text-align: center;
+    /* background-image: url("assets/handmadepaper.png"); */
+    background-color: white;
+    background-repeat: repeat;
+}
+
+.cross {
+    background-image: url(assets/item-cross.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+}
+
+.check {
+    background-image: url(assets/item-check.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+}
+.titleIcon {
+    position: absolute;
+    top:0px;
+    left:0px;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    height: 45px;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+    color:aliceblue;
+    z-index: 2;
+    /*
+    -webkit-box-shadow: 16px -2px 45px -9px rgba(0,0,0,0.5);
+-moz-box-shadow: 16px -2px 45px -9px rgba(0,0,0,0.5);
+box-shadow: 16px -2px 45px -9px rgba(0,0,0,0.5);
+    */
+}
+
+.sliding-menu {
+    position:absolute;
+    top:5px;
+    left:0px;
+    width: 80%;
+    height: 100%;
+    background: #00BCD4;
+    z-index: 1;
+    display: block;
+    -webkit-box-shadow: 16px -2px 45px -9px rgba(0,0,0,0.5);
+-moz-box-shadow: 16px -2px 45px -9px rgba(0,0,0,0.5);
+box-shadow: 16px -2px 45px -9px rgba(0,0,0,0.5);
+    
+}
+
+.menu-item {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    float:left;
+    font-size: 30px;
+    line-height: 2.2;
+    text-align: left;
+    text-indent: 3px;
+    
+}
+
+.logo-link {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    width: 50px;
+    height: 60px;
+    background-image: url(assets/by-CB-logo-square-tiel.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*Animate the sliding menu*/
+.sliding-menu.ng-enter, .sliding-menu.ng-leave {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s; /* Chrome */
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s;
+}
+
+.sliding-menu.ng-enter,
+.sliding-menu.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.sliding-menu.ng-leave,
+.sliding-menu.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+/*Animate the shopping list*/
+.animate-list.ng-move,
+.animate-list.ng-enter,
+.animate-list.ng-leave {
+   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s; /* Chrome */
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+}
+
+.animate-list.ng-leave.ng-leave-active,
+.animate-list.ng-enter {
+  opacity:0;
+  margin-left: 50%;
+}
+
+.animate-list.ng-leave,
+.animate-list.ng-enter.ng-enter-active {
+  opacity:1;
+  margin-left: 5%;
+}
+
+
+.tab-bar {
+    position: absolute;
+    top: 44px;
+    left:0px;
+    width: 100%;
+    height: 30px;
+    line-height: 1.6;
+}
+
+.tab-item {
+    position: relative;
+    float: left;
+    height: 27px;
+    width: 50%;
+    margin: 0 0;
+    vertical-align: middle;
+}
+
+.tab-item-selected {
+    border-bottom: 3px solid #303F9F;
+}
+
+.tip-footer {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    color:#B6B6B6;
+    margin-bottom: 5px;
+    font-family: Verdana;
+}
+
+.tip-footer-green {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    color:darkgreen;
+    margin-bottom: 5px;
+    font-family: Verdana;
+}
+
+.title-text {
+    z-index: 5;
+    font-size: 22px;
+}
+
+.sliding-menu-label {
+    font-size: 18px;
+    color: aliceblue;
+    vertical-align: super;
+    font-family: verdana;
+}
+
+.sliding-menu-space-label {
+    font-size: 18px;
+    color: #F5F5F5;
+    vertical-align: bottom;
+    font-family: verdana;
+}

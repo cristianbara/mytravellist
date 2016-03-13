@@ -1,0 +1,25 @@
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="io.cristianbara.github.myTravelList" version="1.0.0">
+  <name>My Travel List</name>
+  <description>Organize your travel packing with this easy to use app.</description>
+  <author href="http://cristianbara.github.io" email="cristian.dan.bara@gmail.com">CB web dev.</author>
+  <content src="index.html"/>
+  <preference name="permissions" value="none"/>
+  <preference name="orientation" value="portrait"/>
+  <preference name="target-device" value="handset"/>
+  <preference name="fullscreen" value="false"/>
+  <preference name="webviewbounce" value="true"/>
+  <preference name="prerendered-icon" value="true"/>
+  <preference name="stay-in-webview" value="false"/>
+  <preference name="ios-statusbarstyle" value="black-opaque"/> 
+  <preference name="exit-on-suspend" value="false"/>  
+  <preference name="disable-cursor" value="false"/>  
+  <preference name="android-installLocation" value="preferExternal"/> 
+  
+  <icon src="icon.png"/>  
+    
+  <platform name="android">      
+  </platform>
+    
+  <platform name="ios">    
+  </platform>
+</widget>

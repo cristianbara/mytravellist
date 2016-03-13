@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html ng-app="myTravelListApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Travel List</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="angular-animate.js"></script>
+    <script src="angular-contenteditable.js"></script>
+    <script src="ngStorage.js"></script>
+    <script src="angular-sanitize.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<body ng-controller="myTravelListController">
+    <!-- <div class="gwd-div-bkij" id="background"></div> -->
+    <!-- <div class="gwd-div-1stp" id="phone"> -->
+    <div class="gwd-div-1vyq" id="title">
+        <span class="title-text">My Travel List</span>        
+        <div class="tab-bar">
+            <div class="tab-item" ng-class="{'tab-item-selected': isShowingList == true}" ng-click="setIsShowingList(true)">List</div>
+            <div class="tab-item" ng-class="{'tab-item-selected': isShowingList == false}" ng-click="setIsShowingList(false)">Tips 
+                <i class="material-icons" style="font-size: 18px; color: #FFEB3B; vertical-align: top;">lightbulb_outline</i>
+            </div>
+        </div>
+    </div>
+    <div class="titleIcon" ng-click="toggleMenu()" ng-show="isShowingList">
+        <i class="material-icons" ng-hide="showMenu">menu</i>
+        <i class="material-icons" ng-show="showMenu">close</i>
+    </div>
+    
+    <div id="sliding-menu" class="sliding-menu" ng-if="showMenu && isShowingList">
+        <div id="top-spacer" class="menu-item" style="margin-top: 30px;">
+            <!-- leave empty -->
+            <span class="sliding-menu-space-label">Change your list</span>
+        </div>
+        <div id="reset-list" class="menu-item" ng-click="resetList(isShowingList)">
+            <i class="material-icons md-light">done_all</i>
+            <span class="sliding-menu-label"> reset all items</span>
+        </div>
+        <div id="delete-list" class="menu-item" ng-click="deleteList()">
+            <i class="material-icons md-light">delete</i>
+            <span class="sliding-menu-label"> delete all items</span>
+        </div>
+        <div id="middle-spacer" class="menu-item" style="margin-top: 30px;">
+            <!-- leave empty -->
+            <span class="sliding-menu-space-label"> Make a new list</span>
+        </div>
+        <div id="new-empty-list" class="menu-item" ng-click="newEmptyList()">
+            <i class="material-icons md-light">assignment</i>
+            <span class="sliding-menu-label"> new empty list </span>
+        </div>
+        <div id="new-empty-list" class="menu-item" ng-click="newBusinessList()">
+            <i class="material-icons md-light">work</i>
+            <span class="sliding-menu-label"> new business list </span>
+        </div>
+        <div id="new-empty-list" class="menu-item" ng-click="newCityBreakList()">
+            <i class="material-icons md-light">location_city</i>
+            <span class="sliding-menu-label"> new city break list </span>
+        </div>
+        <div id="new-empty-list" class="menu-item" ng-click="newMontainList()">
+            <i class="material-icons md-light">landscape</i>
+            <span class="sliding-menu-label"> new mountain travel list </span>
+        </div>
+        <div id="new-empty-list" class="menu-item" ng-click="newBeachList()">
+            <i class="material-icons md-light">beach_access</i>
+            <span class="sliding-menu-label"> new beach travel list </span>
+        </div>
+    </div>
+
+    <div class="gwd-div-1n6y" id="listbody" ng-show="isShowingList">
+        <!-- the list of travel items to pack -->
+        <div ng-repeat="item in model" class="gwd-div-1g9m animate-list" ng-show="isShowingList">
+            <div ng-switch="item.done">
+                <div class="gwd-div-text" style="" contenteditable="true" ng-model="item.text" strip-br="true" strip-tags="true" select-non-editable="false" ng-class="{done: item.done == true}">
+                    <!-- {{item.text}} -->
+                </div>
+                <div class="gwd-div-pjjz check" ng-switch-when="false" ng-click="markAsDone(item)"></div>
+                <div class="gwd-div-pjjz cross done-btn" ng-switch-when="true" ng-click="removeToDo(item)"></div>
+                <div class="gwd-div-pjjz-r" ng-switch-when="true" ng-click="markUndone(item)">
+                    <i class="material-icons">replay</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gwd-div-1n6y" id="tipbody" ng-hide="isShowingList">
+        <!-- the list of travel tips -->
+        <div ng-repeat="item in tips" class="gwd-div-1g9m-e7 animate-list" ng-hide="isShowingList" ng-click="addToDoFromTip(item.tip, $index)">
+            <div ng-switch="item.done">
+                <div class="gwd-div-tip" style="" contenteditable="false" strip-br="true" strip-tags="true" select-non-editable="false" ng-bind-html="item.text">
+                </div>
+                <div class="tip-footer-green" ng-switch-when="false"> 
+                    add to my list
+                </div>
+                <div class="tip-footer" ng-switch-when="true"> 
+                    added in the list
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="gwd-div-cb5l" id="button" ng-show="isShowingList" ng-click="addToDo()">
+        <i class="material-icons">add</i>
+    </div>
+    
+    <!-- </div> -->
+
+</body>
+
+
+</html>
