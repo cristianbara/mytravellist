@@ -10,7 +10,7 @@ var model = [
     },
     {
         text: "Something you've packed",
-        done: false,
+        done: true,
         fromTip: -1
     },
 
@@ -246,16 +246,41 @@ var beach_model = [
 
 var tips = [
     {
-        text: "Don't forget your <u>sunscreen</u>!",
-        tip: "Sunscreen",
+        text: "Don't forget to <u>check the weather</u>!",
+        tip: "Check the weather",
         done: false
     },
     {
-        text: "<u>Sunglasses</u> are always a good choice.",
-        tip: "Sunglasses",
+        text: "If you are flying, use a <u>transparent bag for cosmetics</u>. It's going to speed up your airport security checkup.",
+        tip: "Transparent bag for cosmetics",
         done: false
     },
-
+    {
+        text: "Don't forget yout <u>tooth brush and tooth paste</u>.",
+        tip: "Tooth brush & tooth paste",
+        done: false
+    },
+    {
+        text: "For a longer trip, a <u>nail clipper</u> might come in handy.",
+        tip: "Nail clipper",
+        done: false
+    },
+    {
+        text: "Sometimes traveling can be noizy. Pack some <u>ear taps</u>",
+        tip: "Ear taps",
+        done: false
+    },
+    {
+        text: "In case you scratch, or injure yourself, pack some <u>adhesive bandages</u>",
+        tip: "Adhesive bandages",
+        done: false
+    },
+    {
+        text: "For long waiting times, <u>something to read</u> may help.",
+        tip: "Adhesive bandages",
+        done: false
+    }
+/* to be extended */
 ];
 
 var openURL = function (url) {

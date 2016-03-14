@@ -23,7 +23,7 @@
     <!-- <div class="gwd-div-bkij" id="background"></div> -->
     <!-- <div class="gwd-div-1stp" id="phone"> -->
     <div class="gwd-div-1vyq" id="title">
-        <span class="title-text">My Travel List</span>        
+              
         <div class="tab-bar">
             <div class="tab-item" ng-class="{'tab-item-selected': isShowingList == true}" ng-click="setIsShowingList(true)">List</div>
             <div class="tab-item" ng-class="{'tab-item-selected': isShowingList == false}" ng-click="setIsShowingList(false)">Tips 
@@ -31,13 +31,14 @@
             </div>
         </div>
     </div>
+     <span class="title-text">My Travel List</span> 
     <div class="titleIcon" ng-click="toggleMenu()" ng-show="isShowingList">
         <i class="material-icons" ng-hide="showMenu">menu</i>
         <i class="material-icons" ng-show="showMenu">close</i>
     </div>
     
     <div id="sliding-menu" class="sliding-menu" ng-if="showMenu && isShowingList">
-        <div id="top-spacer" class="menu-item" style="margin-top: 30px;">
+        <div id="top-spacer" class="menu-item" style="margin-top: 50px;">
             <!-- leave empty -->
             <span class="sliding-menu-space-label">Change your list</span>
         </div>
@@ -49,7 +50,7 @@
             <i class="material-icons md-light">delete</i>
             <span class="sliding-menu-label"> delete all items</span>
         </div>
-        <div id="middle-spacer" class="menu-item" style="margin-top: 30px;">
+        <div id="middle-spacer" class="menu-item" style="margin-top: 10px;">
             <!-- leave empty -->
             <span class="sliding-menu-space-label"> Make a new list</span>
         </div>
