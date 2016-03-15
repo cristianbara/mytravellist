@@ -153,8 +153,8 @@ body {
     font-family: Verdana;
     font-size: 40px;
     line-height: 130%;
-    width: 55px;
-    height: 55px;
+    width: 54px;
+    height: 54px;
     box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 3px, rgba(0, 0, 0, 0.239216) 0px 1px 2px;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -511,4 +511,8 @@ box-shadow: 16px -2px 45px -9px rgba(0,0,0,0.5);
     font-family: Verdana;
     padding-left: 8px;
     
+}
+
+.action-icon {
+    margin: 9px;
 }
