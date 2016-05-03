@@ -6,40 +6,39 @@
     <title>My Travel List</title>
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="initial-scale=1.0">
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
-    <link rel="stylesheet" href="font-awesome.min.css">
-    <link rel="stylesheet" href="style.css" type="text/css">
+   
+    <link rel="stylesheet" href="css/src/style.css" type="text/css">
+    
     <script type="text/javascript" src="cordova.js"></script>
-    <script src="angular.min.js"></script>
-    <script src="angular-animate.js"></script>
-    <script src="angular-contenteditable.js"></script>
-    <script src="ngStorage.js"></script>
-    <script src="angular-sanitize.js"></script>
-    <script src="app.js"></script>
-
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-animate.js"></script>
+    <script src="js/lib/angular-contenteditable.js"></script>
+    <script src="js/lib/ngStorage.js"></script>
+    <script src="js/lib/angular-sanitize.js"></script>
 </head>
 
 <body ng-controller="myTravelListController">
-    <!-- <div class="gwd-div-bkij" id="background"></div> -->
-    <!-- <div class="gwd-div-1stp" id="phone"> -->
+    <!-- loading the script in the first line after the controller declaration sets the UI flags in the $scope and avoids glitchy UI when loading the app -->
+    <script src="js/src/app.js"></script> 
+    
     <div class="gwd-div-1vyq" id="title">
-              
+
         <div class="tab-bar">
             <div class="tab-item" ng-class="{'tab-item-selected': isShowingList == true}" ng-click="setIsShowingList(true)">List</div>
-            <div class="tab-item" ng-class="{'tab-item-selected': isShowingList == false}" ng-click="setIsShowingList(false)">Tips 
+            <div class="tab-item" ng-class="{'tab-item-selected': isShowingList == false}" ng-click="setIsShowingList(false)">Tips
                 <!-- <i class="material-icons" style="font-size: 18px; color: #FFEB3B; vertical-align: top;">lightbulb_outline</i> -->
                 <img width="18" src="assets/icons/ic_lightbulb_outline_white_18dp_1x.png">
             </div>
         </div>
     </div>
-     <span class="title-text">My Travel List</span> 
+    <span class="title-text">My Travel List</span>
     <div class="titleIcon" ng-click="toggleMenu()" ng-show="isShowingList">
         <!-- <i class="material-icons" ng-hide="showMenu">menu</i> -->
         <img width="36" src="assets/icons/ic_menu_white_36dp_1x.png" ng-hide="showMenu">
         <!-- <i class="material-icons" ng-show="showMenu">close</i> -->
         <img width="36" src="assets/icons/ic_close_white_36dp_1x.png" ng-show="showMenu">
     </div>
-    
+
     <div id="sliding-menu" class="sliding-menu" ng-if="showMenu && isShowingList">
         <div id="top-spacer" class="menu-item" style="margin-top: 50px;">
             <!-- leave empty -->
@@ -76,12 +75,12 @@
         </div>
         <div id="new-empty-list" class="menu-item" ng-click="newMontainList()">
             <!-- <i class="material-icons md-light">landscape</i> -->
-             <img width="36" src="assets/icons/ic_landscape_white_36dp_1x.png">
+            <img width="36" src="assets/icons/ic_landscape_white_36dp_1x.png">
             <span class="sliding-menu-label"> new mountain travel list </span>
         </div>
         <div id="new-empty-list" class="menu-item" ng-click="newBeachList()">
             <!-- <i class="material-icons md-light">beach_access</i> -->
-             <img width="36" src="assets/icons/ic_beach_access_white_36dp_1x.png">
+            <img width="36" src="assets/icons/ic_beach_access_white_36dp_1x.png">
             <span class="sliding-menu-label"> new beach travel list </span>
         </div>
     </div>
@@ -96,7 +95,10 @@
                 <div class="gwd-div-pjjz check" ng-switch-when="false" ng-click="markAsDone(item)"></div>
                 <div class="gwd-div-pjjz cross done-btn" ng-switch-when="true" ng-click="removeToDo(item)"></div>
                 <div class="gwd-div-pjjz-r" ng-switch-when="true" ng-click="markUndone(item)">
-                    <i class="material-icons">replay</i>
+                    <svg fill="#388136" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg" style="margin-top:8px;">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z" />
+                    </svg>
                 </div>
             </div>
         </div>
@@ -107,10 +109,10 @@
             <div ng-switch="item.done">
                 <div class="gwd-div-tip" style="" contenteditable="false" strip-br="true" strip-tags="true" select-non-editable="false" ng-bind-html="item.text">
                 </div>
-                <div class="tip-footer-green" ng-switch-when="false"> 
+                <div class="tip-footer-green" ng-switch-when="false">
                     add to my list
                 </div>
-                <div class="tip-footer" ng-switch-when="true"> 
+                <div class="tip-footer" ng-switch-when="true">
                     added in the list
                 </div>
 
@@ -118,14 +120,11 @@
         </div>
 
     </div>
-    
+
     <div class="gwd-div-cb5l" id="button" ng-show="isShowingList" ng-click="addToDo()">
         <!-- <i class="material-icons">add</i> -->
         <img class="action-icon" width="36" src="assets/icons/ic_add_white_36dp_1x.png">
-    </div>
-    
-    <!-- </div> -->
-
+    </div> 
 </body>
 
 
